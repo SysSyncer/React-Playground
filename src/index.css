@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --font-mozilla-headline: "Mozilla Headline", sans-serif;
+    --font-inconsolata: "Inconsolata", sans-serif;
+}
+
+@layer base {
+    h1 {
+        font-size: var(--text-4xl);
+    }
+    h2 {
+        font-size: var(--text-2xl);
+    }
+    a:hover {
+        text-decoration: underline;
+        text-underline-offset: 1px;
+    }
+    a {
+        color: oklch(48.8% 0.243 264.376);
+    }
+}
