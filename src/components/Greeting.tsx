@@ -1,7 +1,7 @@
-const Greeting = () => {
+const Greeting = ({timeOfDay} : {timeOfDay : "morning" | "afternoon"}) => {
     const hour = new Date().getHours();
-    // const name = window.prompt("Enter your full name: (E.g: John Doe)") || "John Doe";
     const name = "Hari Krishnan";
+
     return (
         <div>
             <h1 className="text-nowrap">{hour < 12 ? "Good Morning"
@@ -12,7 +12,7 @@ const Greeting = () => {
                 <span className="bg-red-500 inline-block border-r-4 border-green-500 translate-y-2 pr-2 -translate-1 select-none -skew-x-12 text-white">{name.split(" ")[1]}</span>
             </h1>
             <p className="pt-1 italic">{new Date().toLocaleDateString()}</p>
-
+            <p>Time Of the Day Prop : {timeOfDay === "morning" ? "Good Morning" : "Good Afternoon"}</p>
         </div>
     )
 }

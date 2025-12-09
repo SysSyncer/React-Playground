@@ -8,9 +8,9 @@ import {
     Avatar,
     Person,
     Product,
-    Card, Cart
+    Card, Cart, UserStatus, Weather, StyledCard, ProfileCard, IconComponent, Button, States, ComponentBase
 } from "./components";
-import "./App.css"
+import "./App.css";
 
 function App() {
 
@@ -19,9 +19,10 @@ function App() {
             <Header/>
             <MainContent/>
             <TSXRules/>
-            <Greeting/>
+            <Greeting timeOfDay="morning"/>
             <ProductInfo/>
-            <Avatar name="Hari" imageUrl="https://res.cloudinary.com/dpclcjajc/image/upload/v1762882301/profile_vlb41h.png"/>
+            <Avatar name="Hari"
+                    imageUrl="https://res.cloudinary.com/dpclcjajc/image/upload/v1762882301/profile_vlb41h.png"/>
             <Person name="Harikrishnan N" age="22"/>
             <Product name="Bike" price="$2000"/>
             <Card number="1">
@@ -34,6 +35,14 @@ function App() {
                 <p>This is a Card component</p>
             </Card>
             <Cart/>
+            <UserStatus loggedIn={true} isAdmin={false}/>
+            <Weather temperature={26}/>
+            <StyledCard/>
+            <ProfileCard/>
+            <IconComponent fontSize="50px" color="gold"/>
+            <Button/>
+            <States/>
+            <ComponentBase/>
             <Footer/>
         </div>
     )
