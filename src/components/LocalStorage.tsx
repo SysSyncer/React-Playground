@@ -22,7 +22,7 @@ const LocalStorage = () => {
             <h1>{name}</h1>
             <div className="flex gap-2">
                 <input onChange={handleChange} className="border border-solid border-black focus:outline-none px-1"
-                       placeholder="Enter your name" type="text" value={name}/>
+                       placeholder="Check <LocalStorage>" type="text" value={name}/>
                 <button onClick={handleClear} className="bg-black text-white px-1 hover:opacity-50">Clear</button>
             </div>
         </div>

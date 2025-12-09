@@ -20,6 +20,7 @@ import ComponentBase from "./ComponentBase.tsx";
 import LocalStorage from "./LocalStorage.tsx";
 import Counter from "./Counter.tsx";
 import Todo from "./Todo.tsx";
+import Profile from "./Profile.tsx";
 
 export {
     Header,
@@ -43,5 +44,6 @@ export {
     ComponentBase,
     LocalStorage,
     Counter,
-    Todo
+    Todo,
+    Profile
 };

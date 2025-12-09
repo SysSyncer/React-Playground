@@ -19,7 +19,7 @@ import {
     States,
     ComponentBase,
     LocalStorage,
-    Counter, Todo
+    Counter, Todo, Profile
 } from "./components";
 import "./App.css";
 
@@ -57,6 +57,7 @@ function App() {
             <LocalStorage/>
             <Counter/>
             <Todo/>
+            <Profile/>
             <Footer/>
         </div>
     )
