@@ -1,0 +1,79 @@
+import { useState } from "react";
+import React from "react";
+
+interface ITodo {
+    text: string;
+    done: boolean;
+}
+
+const Todo = () => {
+    // FIX 1: Remove '| null'. Initialize with an empty array [] so you don't have to check for null later.
+    const [todos, setTodos] = useState<ITodo[]>([{ text: "Work", done: false }]);
+
+    // FIX 2: Only track the string text for the input, not the full ITodo object.
+    const [inputText, setInputText] = useState<string>("");
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        // FIX 3: No need for preventDefault here. Just update the text state.
+        setInputText(event.target.value);
+    };
+
+    const handleAdd = () => {
+        if (!inputText) return; // Prevent adding empty todos
+
+        // Create the object ONLY when we are ready to add it
+        const newTodo: ITodo = {
+            text: inputText,
+            done: false
+        };
+
+        setTodos([...todos, newTodo]);
+        setInputText(""); // Clear the input field
+    };
+
+    const toggleDone = (indexToToggle: number) => {
+        const updatedTodos = todos.map((item, idx) => {
+            if (idx === indexToToggle) {
+                return { ...item, done: !item.done };
+            }
+            return item;
+        });
+        setTodos(updatedTodos);
+    };
+
+    return (
+        <div className="flex flex-col items-center gap-5 mt-10">
+            <ul className="p-0 m-0 w-64">
+                {todos.map((todo, idx) => (
+                    // FIX 4: The 'key' must be on the outermost element inside the map
+                    <div key={idx} className="flex gap-2 justify-between mb-2">
+                        {/* Add line-through style if done */}
+                        <li className={todo.done ? "line-through text-gray-500" : ""}>
+                            {todo.text}
+                        </li>
+                        <input
+                            type="checkbox"
+                            checked={todo.done}
+                            onChange={() => toggleDone(idx)}
+                        />
+                    </div>
+                ))}
+            </ul>
+            <div className="flex gap-2">
+                <input
+                    className="border border-black border-solid focus:outline-none px-1"
+                    value={inputText} // Controlled component
+                    onChange={handleChange}
+                />
+                {/* FIX 5: Connect the Add function */}
+                <button
+                    onClick={handleAdd}
+                    className="bg-red-500 text-white px-2 py-1 hover:opacity-50"
+                >
+                    Add
+                </button>
+            </div>
+        </div>
+    )
+}
+export default Todo

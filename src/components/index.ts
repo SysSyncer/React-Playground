@@ -17,6 +17,9 @@ import IconComponent from "./IconComponent.tsx";
 import Button from "./Button.tsx";
 import States from "./States.tsx";
 import ComponentBase from "./ComponentBase.tsx";
+import LocalStorage from "./LocalStorage.tsx";
+import Counter from "./Counter.tsx";
+import Todo from "./Todo.tsx";
 
 export {
     Header,
@@ -37,5 +40,8 @@ export {
     IconComponent,
     Button,
     States,
-    ComponentBase
+    ComponentBase,
+    LocalStorage,
+    Counter,
+    Todo
 };

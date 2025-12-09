@@ -8,7 +8,18 @@ import {
     Avatar,
     Person,
     Product,
-    Card, Cart, UserStatus, Weather, StyledCard, ProfileCard, IconComponent, Button, States, ComponentBase
+    Card,
+    Cart,
+    UserStatus,
+    Weather,
+    StyledCard,
+    ProfileCard,
+    IconComponent,
+    Button,
+    States,
+    ComponentBase,
+    LocalStorage,
+    Counter, Todo
 } from "./components";
 import "./App.css";
 
@@ -43,6 +54,9 @@ function App() {
             <Button/>
             <States/>
             <ComponentBase/>
+            <LocalStorage/>
+            <Counter/>
+            <Todo/>
             <Footer/>
         </div>
     )
