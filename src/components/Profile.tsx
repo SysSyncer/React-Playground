@@ -55,10 +55,16 @@ const Profile = () => {
 
     return (
         <div>
-            <ul className="p-0 m-0">
+            <input type="text" placeholder="Name" onChange={handleNameChange}
+                   className="border border-solid border-black focus:outline-none px-1 block mb-2"/>
+            <input type="number" placeholder="Age" onChange={handleAgeChange}
+                   className="border border-solid border-black focus:outline-none px-1 block"/>
+            <button onClick={handleProfileAdd} className="block bg-black text-white px-2 py-1 mb-3 mt-2">Add</button>
+            <ul className="p-0 m-0 max-h-[250px] overflow-y-scroll">
                 {
                     profiles.map((profile, idx) => (
-                        <div key={idx} className="flex justify-between gap-2 w-lg border border-solid border-black p-1 mb-3">
+                        <div key={idx}
+                             className="flex justify-between gap-2 w-lg border border-solid border-black p-1 mt-1">
                             <li className="text-left">
                                 <p className="mb-1"><span className="font-bold">Name:&nbsp;</span> {profile.name}</p>
                                 <p className="mb-1"><span className="font-bold">Age:&nbsp;</span>{profile.age}</p>
@@ -74,11 +80,6 @@ const Profile = () => {
                         </div>
                     ))
                 }
-                <input type="text" placeholder="Name" onChange={handleNameChange}
-                       className="border border-solid border-black focus:outline-none px-1 block mb-2"/>
-                <input type="number" placeholder="Age" onChange={handleAgeChange}
-                       className="border border-solid border-black focus:outline-none px-1 block"/>
-                <button onClick={handleProfileAdd} className="block bg-black text-white px-2 py-1 mt-2">Add</button>
             </ul>
         </div>
     )

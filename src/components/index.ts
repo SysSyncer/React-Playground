@@ -21,6 +21,10 @@ import LocalStorage from "./LocalStorage.tsx";
 import Counter from "./Counter.tsx";
 import Todo from "./Todo.tsx";
 import Profile from "./Profile.tsx";
+import TodoList from "./TodoList.tsx";
+import ProfileList from "./ProfileList.tsx";
+import ShoppingList from "./ShoppingList.tsx";
+import CopyInput from "./CopyInput.tsx";
 
 export {
     Header,
@@ -45,5 +49,9 @@ export {
     LocalStorage,
     Counter,
     Todo,
-    Profile
+    Profile,
+    TodoList,
+    ProfileList,
+    ShoppingList,
+    CopyInput
 };
