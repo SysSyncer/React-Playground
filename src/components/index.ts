@@ -25,6 +25,13 @@ import TodoList from "./TodoList.tsx";
 import ProfileList from "./ProfileList.tsx";
 import ShoppingList from "./ShoppingList.tsx";
 import CopyInput from "./CopyInput.tsx";
+import BasicEffect from "./BasicEffect.tsx";
+import CounterEffect from "./CounterEffect.tsx";
+import FetchData from "./FetchData.tsx";
+import BaseComponent from "./BaseComponent.tsx";
+import UserProfile from "./UserProfile.tsx";
+import {ThemeProvider} from "./ThemeContext.tsx";
+import ThemeContextExample from "./ThemeContextExample.tsx";
 
 export {
     Header,
@@ -53,5 +60,12 @@ export {
     TodoList,
     ProfileList,
     ShoppingList,
-    CopyInput
+    CopyInput,
+    BasicEffect,
+    CounterEffect,
+    FetchData,
+    BaseComponent,
+    UserProfile,
+    ThemeProvider,
+    ThemeContextExample,
 };

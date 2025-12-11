@@ -19,7 +19,7 @@ const CopyInput = () => {
 
     return (
         <div>
-            <PopContent copied={isCopied}/>
+            <div id="#popup"></div>
             <div className="flex gap-2 items-center m-0 p-0">
                 <input
                     onChange={(event: React.ChangeEvent<HTMLInputElement>) => setInputValue(event.target.value)}
@@ -30,6 +30,7 @@ const CopyInput = () => {
                     {isCopied ? <FaClipboardCheck/> : <FaClipboard/>}
                 </button>
             </div>
+            <PopContent copied={isCopied}/>
         </div>
     )
 }
