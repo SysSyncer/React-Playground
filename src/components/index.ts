@@ -32,6 +32,7 @@ import BaseComponent from "./BaseComponent.tsx";
 import UserProfile from "./UserProfile.tsx";
 import {ThemeProvider} from "./ThemeContext.tsx";
 import ThemeContextExample from "./ThemeContextExample.tsx";
+import CounterReducer from "./CounterReducer.tsx";
 
 export {
     Header,
@@ -68,4 +69,5 @@ export {
     UserProfile,
     ThemeProvider,
     ThemeContextExample,
+    CounterReducer
 };

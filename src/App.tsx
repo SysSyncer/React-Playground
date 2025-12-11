@@ -20,7 +20,7 @@ import {
     ComponentBase,
     LocalStorage,
     Counter, Todo, Profile, TodoList, ProfileList, ShoppingList, CopyInput, BasicEffect, CounterEffect, FetchData,
-    BaseComponent, UserProfile, ThemeProvider, ThemeContextExample
+    BaseComponent, UserProfile, ThemeProvider, ThemeContextExample, CounterReducer
 } from "./components";
 import {UserProvider} from "./components/UserContext.tsx";
 import "./App.css";
@@ -71,6 +71,7 @@ function App() {
                     <BaseComponent/>
                     <UserProfile/>
                     <ThemeContextExample/>
+                    <CounterReducer/>
                     <Footer/>
                 </div>
             </UserProvider>
